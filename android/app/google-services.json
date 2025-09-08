@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "235895456166",
+    "project_id": "civic-eye-reports",
+    "storage_bucket": "civic-eye-reports.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235895456166:android:825dab6f1c5f2906ebcf67",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJVkZ1A6IVAlkvmc3wPjWko8CmVDBjklo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

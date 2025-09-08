@@ -1,0 +1,24 @@
+
+Troubleshooting Log:
+
+Issue: Persistent build failure related to `google_sign_in` package. The build fails with errors indicating that an old, incorrect version of the `auth_service.dart` file is being used, despite the file being updated with the correct code.
+
+Steps Taken:
+
+1.  **Initial Error:** The build failed with errors related to the `GoogleSignIn` class, specifically the constructor and the `signIn` method.
+
+2.  **Code Correction:** The `lib/services/auth_service.dart` file was updated to use the correct API for `google_sign_in`. The code was verified multiple times.
+
+3.  **`flutter clean`:** The `flutter clean` command was run to clear the build cache. The build failed again with the same error.
+
+4.  **`rm -rf .dart_tool`:** The `.dart_tool` directory was manually deleted to force a complete re-creation of the package and build cache. `flutter pub get` was run to regenerate the necessary files. The build failed again with the same error.
+
+5.  **`flutter pub remove/add`:** The `google_sign_in` package was removed from the `pubspec.yaml` and then added back. This was done to ensure a fresh download of the package. The build failed again with the same error.
+
+6.  **`flutter pub upgrade`:** The `flutter pub upgrade` command was run to update all dependencies to their latest compatible versions. No dependencies were changed, as they were already up-to-date. The build failed again with the same error.
+
+7.  **File Verification:** The contents of `lib/services/auth_service.dart` were read and verified multiple times to ensure the correct code was present.
+
+Conclusion:
+
+The build process is consistently using an old, incorrect version of the `auth_service.dart` file, despite all attempts to clear the cache and update the dependencies. This suggests a deep caching issue within the development environment that is not being resolved by the standard Flutter tools. A full restart of the IDE and emulator is recommended.
